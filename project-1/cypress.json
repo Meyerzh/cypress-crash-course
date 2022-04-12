@@ -1,0 +1,9 @@
+{
+  "ignoreTestFiles": [
+    "**/2-advanced-examples/*",
+    "**/1-getting-started/*"
+  ],
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "projectId": "j1zusy"
+}
