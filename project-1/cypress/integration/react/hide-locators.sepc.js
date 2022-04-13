@@ -10,26 +10,6 @@ describe('Locators', () => {
     })
   })
 
-  it('05: add Ukraine Attacks, QLD & NSW Floodings, COVID-19, COVID-19 International Travel Tool ', () => {
-    cy.get('.nav-li-a').contains('TRAVEL ALERTS').trigger('mouseover')
-    cy.get('#menu-two > li a').should(($list) => {
-      expect($list).to.have.length(4)
-      expect($list.eq(0), 'first item')
-        .to.contain('Ukraine Attacks')
-        .and.to.have.attr('href', '/travel-alerts/ukraine-attacks')
-      expect($list.eq(1), 'second item')
-        .to.contain('QLD & NSW Floodings')
-        .and.to.have.attr('href', '/travel-alerts/qld-nsw-floods')
-      expect($list.eq(2), 'third item')
-        .to.contain('COVID-19')
-        .and.to.have.attr('href', '/travel-alerts/coronavirus')
-      expect($list.eq(3), 'fourth item')
-        .to.contain('COVID-19 International Travel Tool')
-        .and.to.have.attr('href', '/covid-international-travel-requirements')
-
-
-    })
-  })
 
   it('01 Update alert text:', () => {
     cy.contains('COVID-19 COVER: Discover how our COVID-19 benefits can help protect your trip.')
@@ -72,5 +52,25 @@ describe('Locators', () => {
 // COVID-19 - travel-alerts/coronavirus
 // COVID-19 International Travel Tool - covid-international-travel-requirements
 
+  it('05: add Ukraine Attacks, QLD & NSW Floodings, COVID-19, COVID-19 International Travel Tool ', () => {
+    cy.get('.nav-li-a').contains('TRAVEL ALERTS').trigger('mouseover')
+    cy.get('#menu-two > li a').should(($list) => {
+      expect($list).to.have.length(4)
+      expect($list.eq(0), 'first item')
+        .to.contain('Ukraine Attacks')
+        .and.to.have.attr('href', '/travel-alerts/ukraine-attacks')
+      expect($list.eq(1), 'second item')
+        .to.contain('QLD & NSW Floodings')
+        .and.to.have.attr('href', '/travel-alerts/qld-nsw-floods')
+      expect($list.eq(2), 'third item')
+        .to.contain('COVID-19')
+        .and.to.have.attr('href', '/travel-alerts/coronavirus')
+      expect($list.eq(3), 'fourth item')
+        .to.contain('COVID-19 International Travel Tool')
+        .and.to.have.attr('href', '/covid-international-travel-requirements')
+
+
+    })
+  })
 
 })
